@@ -1,1 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>For You 🤍</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: Georgia, serif;
+      background: #ffffff;
+      color: #111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 24px;
+      text-align: center;
+    }
+    .card {
+      max-width: 520px;
+      line-height: 1.6;
+    }
+    .heart {
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+    .button {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #ff6b81;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="heart">❤️</div>
+    <p><strong>Hey baby</strong></p>
+
+    <p>
+      I woke up with you on my mind, and I couldn’t help it —  
+      the desire for a lifetime of mornings waking up next to you  
+      is at an all-time high.
+    </p>
+
+    <p>
+      This song found me today, and it feels like my heart put into music,  
+      so I wanted you to hear it.<br/>
+      I hope you hear it the way I feel you.
+    </p>
+
+    <p><strong>This is for you 🤍</strong></p>
+
+    <a href="#" id="playButton" class="button">Play Song 🎶</a>
+
+    <p style="margin-top:24px; font-size:14px; opacity:0.7;">
+      Your song will start shortly…
+    </p>
+  </div>
+
+  <!-- Audio setup -->
+  <audio id="song" src="http://ddl.safone.vip/watch/AgADfR4407390"></audio>
+
+  <script>
+    // Start the song automatically after 8 seconds
+    setTimeout(() => {
+      const song = document.getElementById('song');
+      song.play().catch(() => {
+        // fallback: user must click the button
+        document.getElementById('playButton').style.display = 'inline-block';
+      });
+    }, 8000);
+
+    // Play button fallback for mobile/autoplay
+    document.getElementById('playButton').addEventListener('click', () => {
+      document.getElementById('song').play();
+      document.getElementById('playButton').style.display = 'none';
+    });
+
+    // Hide button initially (only shows if autoplay fails)
+    document.getElementById('playButton').style.display = 'none';
+  </script>
+</body>
+</html>
 
