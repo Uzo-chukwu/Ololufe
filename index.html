@@ -63,14 +63,14 @@
   </div>
 
   <!-- Audio setup -->
-  <audio id="song" src="http://ddl.safone.vip/watch/AgADfR4407390"></audio>
+  <audio id="song" src="https://drive.google.com/uc?id=1hKAaqymzZEtqgKWAICkDlqdVq0vjJDnc"></audio>
 
   <script>
-    // Start the song automatically after 8 seconds
+    // Try to autoplay after 8 seconds
     setTimeout(() => {
       const song = document.getElementById('song');
       song.play().catch(() => {
-        // fallback: user must click the button
+        // If autoplay is blocked, show the button
         document.getElementById('playButton').style.display = 'inline-block';
       });
     }, 8000);
@@ -86,4 +86,3 @@
   </script>
 </body>
 </html>
-
