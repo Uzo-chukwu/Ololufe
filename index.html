@@ -35,54 +35,34 @@
       margin-top: 16px;
     }
   </style>
+
+  <!-- Auto redirect after 8 seconds -->
+  <meta http-equiv="refresh" content="8;url=https://music.youtube.com/watch?v=CGb_1HpO3sA&si=zMuwcTH-uS_1QS_S">
 </head>
 <body>
   <div class="card">
-    <div class="heart">hhh❤️</div>
+    <div class="heart">❤️</div>
     <p><strong>Hey baby</strong></p>
 
     <p>
-      I woke up with you on my mind, and I couldn’t help it —  
+      I woke up with you on my mind, and I couldn’t help it ,  
       the desire for a lifetime of mornings waking up next to you  
-      is at an all-time high.
+      is at an all-time high right now.
     </p>
 
     <p>
-      This song found me today, and it feels like my heart put into music,  
+      A song came to my mind, and it feels like my heart put into the song,  
       so I wanted you to hear it.<br/>
-      I hope you hear it the way I feel you.
+      I hope you hear it the way I feel it.
     </p>
 
     <p><strong>This is for you 🤍</strong></p>
 
-    <a href="#" id="playButton" class="button">Play Song 🎶</a>
+    <a href="https://music.youtube.com/watch?v=CGb_1HpO3sA&si=zMuwcTH-uS_1QS_S" class="button">Play Song 🎶</a>
 
     <p style="margin-top:24px; font-size:14px; opacity:0.7;">
-      Your song will start shortly…
+      Taking you to the song…
     </p>
   </div>
-
-  <!-- Audio setup -->
-  <audio id="song" src="https://drive.google.com/uc?id=1hKAaqymzZEtqgKWAICkDlqdVq0vjJDnc"></audio>
-
-  <script>
-    // Try to autoplay after 8 seconds
-    setTimeout(() => {
-      const song = document.getElementById('song');
-      song.play().catch(() => {
-        // If autoplay is blocked, show the button
-        document.getElementById('playButton').style.display = 'inline-block';
-      });
-    }, 8000);
-
-    // Play button fallback for mobile/autoplay
-    document.getElementById('playButton').addEventListener('click', () => {
-      document.getElementById('song').play();
-      document.getElementById('playButton').style.display = 'none';
-    });
-
-    // Hide button initially (only shows if autoplay fails)
-    document.getElementById('playButton').style.display = 'none';
-  </script>
 </body>
 </html>
